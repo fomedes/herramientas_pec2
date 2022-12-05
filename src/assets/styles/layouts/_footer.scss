@@ -1,0 +1,32 @@
+@use "sass:math";
+
+.footer ul{
+  display: flex;
+}
+
+.footer li {
+  border: 1px solid red;
+  flex: 3;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer .logo{
+  flex: 2;
+  text-align: left;
+}
+
+.footer .socialLinks{
+  flex: 2;
+}
+
+.socialLinks{
+  display: flex;
+}
+
+.footer .page{
+  flex: 1;
+}
+
+.footer a {
+}
