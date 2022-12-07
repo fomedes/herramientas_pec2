@@ -1,32 +1,23 @@
 @use "sass:math";
 
-.footer ul{
-  display: flex;
+@media (max-width: 768px) {
+  .navbar, .d-flex {
+    justify-content: space-around;    
+  }
+
+  .d-flex {
+    margin-inline: 10%;
+  }
+
+  .mx-auto {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    align-self: center;
+  }
 }
 
-.footer li {
-  border: 1px solid red;
-  flex: 3;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer .logo{
-  flex: 2;
-  text-align: left;
-}
-
-.footer .socialLinks{
-  flex: 2;
-}
-
-.socialLinks{
-  display: flex;
-}
-
-.footer .page{
-  flex: 1;
-}
-
-.footer a {
+.navbar-brand {
+  margin: 0;
 }

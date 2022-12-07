@@ -1,0 +1,56 @@
+@use "sass:math";
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-block: 20px;
+  vertical-align:middle;
+  height: 90%;
+}
+
+.member {
+  width: 31%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 8px;
+
+  @media (max-width: 1200px) {
+    width: 45%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+}
+
+.member__picture {
+  height: 100%;
+}
+
+.member__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-start-start-radius: 8px;
+  border-end-start-radius: 8px;
+}
+
+.member__description { 
+  max-width: 50%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.member__description-name {
+  font-family: $font-brand;
+  font-size: 1.6em;
+  text-align: center;
+  border-block-end: 1px dashed black;
+}
