@@ -7,8 +7,15 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $font-family-serif: "Georgia", "Times New Roman", serif;
 $font-brand: 'Metal Mania';
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #1440b0;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$color-corporate: #000078;
+$color-masterbrand: #ff2a00;
+$color-bg: color.scale($color-masterbrand, $lightness: 70%);
 
-$mqMinWidth: 420px;
+
+// Media screens
+
+$Screen-xs: 576px;
+$Screen-sm: 768px;
+$Screen-md: 992px;
+$Screen-lg: 1200px;
+$Screen-xl: 1400px;

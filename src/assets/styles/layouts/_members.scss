@@ -11,12 +11,13 @@
 
 .member {
   width: 31%;
-  background: rgba(255, 255, 255, 0.2);
+  background: $color-bg;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
   border-radius: 8px;
+  height: 35vh;
 
   @media (max-width: 1200px) {
     width: 45%;
@@ -50,7 +51,28 @@
 
 .member__description-name {
   font-family: $font-brand;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   text-align: center;
   border-block-end: 1px dashed black;
+}
+
+.member__description-role {
+  text-align: center;
+  font-weight: 600;
+}
+
+.member__description-info {
+  text-align: left;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /*  Hide scrollbar IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar Firefox */
+
+  // Hide scrollbar for Chrome, Safari and Opera
+  .member__description-info::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width:$Screen-xs) {
+    font-size: 0.8rem;
+  }
 }
