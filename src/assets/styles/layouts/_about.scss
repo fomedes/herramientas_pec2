@@ -4,7 +4,8 @@ blockquote {
 
 blockquote p {
   padding: 15px;
-  background: #eee;
+  margin: 0;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
 }
 
@@ -14,4 +15,89 @@ blockquote p::before {
 
 blockquote p::after {
   content: '\201D';
+}
+
+figcaption {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
+
+
+
+@supports (display: grid) {
+  .grid__about {
+    display: grid;
+    grid-template-areas:  "a a b b"
+                          "c d d d"
+                          "c e e e"
+                          "f f f g"
+                          "h h h g";
+    grid-template-columns: repeat(4, 25%) ;
+    align-items: center;
+
+    @media (max-width: $Screen-xl) {
+      grid-template-areas:  "a a a b b"
+                            "c c d d d"
+                            "c c e e e"
+                            "f f f g g"
+                            "h h h g g";  
+      grid-template-columns: repeat(5, 20%) ;
+    }
+    @media (max-width: $Screen-lg) {
+      grid-template-areas:  "a a b"
+                            "c d d"
+                            "c e e"
+                            "f f g"
+                            "h h g";
+      grid-template-columns: repeat(3, 33.33%) ;                 
+    }
+    @media (max-width: $Screen-md) {
+      grid-template-areas:  "a b"
+                            "c d"
+                            "e e"
+                            "f f"
+                            "h g";
+      grid-template-columns: repeat(2, 50%)
+    }
+    @media (max-width: $Screen-sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .grid__item {
+    padding: 10px;
+    margin: 0;
+    text-align: start;
+  }
+
+  .grid__item-a { grid-area: a; }
+  .grid__item-b { grid-area: b; }
+  .grid__item-c { grid-area: c; }
+  .grid__item-d { grid-area: d; }
+  .grid__item-e { grid-area: e; }
+  .grid__item-f { grid-area: f; }
+  .grid__item-g { grid-area: g; }
+  .grid__item-h { grid-area: h; }
+  .grid__item-i { grid-area: i; }
+  .grid__item-j { grid-area: j; }
+
+
+  .grid__image {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+
+    @media (max-width: $Screen-sm) {
+    width: 50%;
+    }
+  }
+
+  .grid__picture {
+
+    @media (max-width: $Screen-sm) {
+      text-align: center;
+    }
+  }
 }

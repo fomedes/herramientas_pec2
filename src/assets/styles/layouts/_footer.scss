@@ -1,11 +1,11 @@
 @use "sass:math";
 
 @media (max-width: 768px) {
-  .navbar, .d-flex {
+  .navbar, .footer__links {
     justify-content: space-around;    
   }
 
-  .d-flex {
+  .footer__links {
     margin-inline: 10%;
   }
 
